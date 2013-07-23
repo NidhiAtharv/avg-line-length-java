@@ -62,3 +62,6 @@ Refactor the code and make it testable and readable -- the way you want it to be
 
 Save your solution as com.chegg.hw.step3.AvgLineLength
 
+__Step 4__:
+
+What can you do to improve the performance of your program? How do you measure it?
