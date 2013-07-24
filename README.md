@@ -1,4 +1,4 @@
-Staff Software Eng in Test for Search & Personalization
+Staff Software Engineer, QA Automation for Search & Personalization
 -----------------------
 
 
