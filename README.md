@@ -1,19 +1,29 @@
-Staff Software Eng - Test & Performance
+Staff Software Eng in Test for Search & Personalization
 -----------------------
 
 
-We anticipate that this problem will take you about 1 hour. We know that this is a significant time committment before a technical phone interview, but we want to talk about this experience as part of the call.
+We anticipate that this problem will take you about 1 hour. We know that this is a significant time committment before a technical phone interview, but we want to talk about your solution as part of the call.
 
 __Goal__: Prove yourself by fixing the provided average line length program (avgll)
 
 __Usage__: 
 
-To invoke the program on a file, use the -f option followed by a filename.
+To find the average line length in characters, use the -c switch:
 
-    $ avgll -f <filename>
+    $ java -jar build/libs/avg-line-length-java.jar -c <filename>
     50.0
 
-The output is a decimal number that represents the average line length of the file, which means the number of unicode characters on all the lines divided by the total number of lines.
+The output is a decimal number that represents the average line length of the file in characters, which means the number of printable unicode characters on all the lines divided by the total number of lines.
+
+
+To find the average line length in words, use the -w switch:
+
+    $ java -jar build/libs/avg-line-length-java.jar -w <filename>
+    10.0
+    
+The output is a decimal number that represents the average line length of the file in words, which means the number of unicode sequences (delimited by space characters) divided by the total number of lines.
+
+Using the "-" character as a filename causes the program to read from stdin instead of a file.
 
 __Code available here__: 
     
@@ -31,37 +41,47 @@ and then choose Import Existing Projects into Workspace... from the File menu in
 
 Other useful commands will be:
     
-    gradle build (runs build)
+    gradle jar   (builds jar file)
     gradle test  (runs unit tests)
 
 __Step 1__:
 
-You will notice upon running the program for the first time that it doesn't work at all. :(
+Change directory into the project root folder on the cmd line shell.
 
-Get it running and fix the obvious mistakes you see. 
+Run:
 
-Save your solution as com.chegg.hw.step1.AvgLineLength
+    java -jar build/libs/avg-line-length-java.jar -w src/test/resources/test1.txt
+    java -jar build/libs/avg-line-length-java.jar -c src/test/resources/test1.txt
+
 
 __Step 2__:
+
+You will notice that the program outputs the correct values for the test input test1.txt.
+
+Unfortunately, very limited testing will reveal some problems.
 
 There are actually a lot of different cases that you need to test to get the calculation right. We want to see how you think about figuring out all the cases. 
 
 Put all your test data in src/test/resources and all of your test code (as JUnit) in src/test/java. We've provided a few examples to try.
 
-As you find test inputs that fail, patch the code to handle them.
+As you find test inputs that fail, patch the code to handle them. Remember, you "own" the code now, so you should refactor the code to make it testable and readable -- the way you want it to be. Include documentation where helpful.
 
-Save your solution as com.chegg.hw.step2.AvgLineLength
+Save your solution as com.chegg.hw.AvgLineLength
 
 __Step 3__:
 
-Your code probably now works, but it's a mess. Oh, well, it was already a mess before you started :P 
+Now that your program produces (more) correct results, let's consider performance. What happens when we input a several gigabyte file? Describe the cases that you would like to explore and how you would find out where the bottlenecks are in the program. Also, are there any assumptions you made in step 2 (or we made in the original) that limit what kinds of input that can be used?
 
-In this step, you own the code. 
+Perform at least a basic analysis of the actual program on some large test input (describe your methodology in a src/test/resources/speedtest.txt). Make some low-hanging improvements and describe how to make further improvements.
 
-Refactor the code and make it testable and readable -- the way you want it to be. Make sure it still passes all the cases you have identified in Step 2. 
-
-Save your solution as com.chegg.hw.step3.AvgLineLength
+Save the speed-improved version as com.chegg.hw.AvgLineLengthFaster
 
 __Step 4__:
 
-What can you do to improve the performance of your program? How do you measure it?
+Submit your project. Run
+
+    gradle clean submitArchive
+    
+There is now a file named lastname_firstname_avgll.tar.gz in the directory above the project directory. Please rename that with your own lastname and firstname and email it to the recruiter.
+
+Happy Coding!
