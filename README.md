@@ -6,6 +6,8 @@ We anticipate that this problem will take you about 1 hour. We know that this is
 
 __Goal__: Demonstrate your abilities as an engineer in test by fixing the provided average line length program (avgll)
 
+__NOTE__: You will need access to a UNIX/Linux system to complete this exercise.
+
 __Usage__: 
 
 To find the average line length in characters, use the -c switch:
@@ -78,6 +80,12 @@ Perform at least a basic analysis of the actual program on some large test input
 Make some low-hanging improvements and describe how to make further improvements.
 
 Save the speed-improved version as com.chegg.hw.AvgLineLengthFaster
+
+Create a shell script in the root project folder called ``speedtest.sh`` and have it
+
+1. synthesize large test data in /tmp
+2. time both run modes using each AvgLineLength and AvgLineLengthFaster
+3. fail if the output of the two differ
 
 __Step 4__:
 
