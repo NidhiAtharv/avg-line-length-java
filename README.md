@@ -73,10 +73,14 @@ Save your solution as com.chegg.hw.AvgLineLength
 
 __Step 3__:
 
-Now that your program produces (more) correct results, let's consider performance. What happens when we input a several gigabyte file? Describe the cases that you would like to explore and how you would find out where the bottlenecks are in the program. Also, are there any assumptions you made in step 2 (or we made in the original) that limit what kinds of input that can be used?
+Now that your program produces (more) correct results, let's consider performance. What 
+happens when we input a several gigabyte file? 
+Describe the cases that you would like to explore and how you would find out where the 
+bottlenecks are in the program. Also, are there any assumptions you made in step 2 
+(or we made in the original) that limit what kinds of input that can be used? Document these in ``speedtest.readme.txt``.
 
-Perform at least a basic analysis of the actual program on some large test input 
-(describe your methodology in a src/test/resources/speedtest.txt but do not include it in the final submission). 
+Perform at least a basic analysis of the actual program on some generated large test input 
+(but do not include it in the final submission). 
 Make some low-hanging improvements and describe how to make further improvements.
 
 Save the speed-improved version as com.chegg.hw.AvgLineLengthFaster
