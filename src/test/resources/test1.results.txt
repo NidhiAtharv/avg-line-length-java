@@ -1,0 +1,8 @@
+#############################################################################
+# Try test input test1.txt. Has 2 lines, 4 words per line, 20 char per line #
+#############################################################################
+$ gradle jar
+$ java -jar build/libs/avg-line-length-java.jar -w src/test/resources/test1.txt
+4.0
+$ java -jar build/libs/avg-line-length-java.jar -c src/test/resources/test1.txt
+20.0

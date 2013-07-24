@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.8.2'
+}
+
+task submitArchive(dependsOn: 'jar',type: Tar) {
+    baseName = "lastname_firstname_avgll"
+    destinationDir = new File('..')
+    compression = Compression.GZIP
+    from ('.')
+}
+
+manifest.mainAttributes("Main-Class" : "com.chegg.hw.AvgLineLength")
+mainClassName = 'com.chegg.hw.AvgLineLength'
