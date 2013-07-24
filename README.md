@@ -4,7 +4,7 @@ Staff Software Eng in Test for Search & Personalization
 
 We anticipate that this problem will take you about 1 hour. We know that this is a significant time committment before a technical phone interview, but we want to talk about your solution as part of the call.
 
-__Goal__: Prove yourself by fixing the provided average line length program (avgll)
+__Goal__: Demonstrate your abilities as an engineer in test by fixing the provided average line length program (avgll)
 
 __Usage__: 
 
